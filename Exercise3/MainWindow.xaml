@@ -1,0 +1,29 @@
+﻿<Window x:Class="Exercise3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:Student x:Key="localStudent"
+                      Name="Tom Smith"
+                      StudentNumber="s1234567"
+                      Email="s1234567@itsligo.ie"
+                      Phone="086 123 456">
+        </local:Student>
+    </Window.Resources>
+    <Grid>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="131,80,0,0" VerticalAlignment="Top"/>
+        <Label Content="Student Number:" HorizontalAlignment="Left" Margin="131,121,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="131,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="Phone:" HorizontalAlignment="Left" Margin="131,220,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkName" Text="{Binding Path=Name, Source={StaticResource localStudent}, Mode=OneWay}" HorizontalAlignment="Left" Margin="284,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkID" Text="{Binding Path=StudentNumber, Mode=OneWay, Source={StaticResource localStudent}}" HorizontalAlignment="Left" Margin="284,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkMail" Text="{Binding Path=Email, Mode=OneWay, Source={StaticResource localStudent}}" HorizontalAlignment="Left" Margin="284,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkPhone" Text="{Binding Path=Phone, Mode=OneWay, Source={StaticResource localStudent}}" HorizontalAlignment="Left" Margin="284,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>

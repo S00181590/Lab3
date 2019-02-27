@@ -1,0 +1,30 @@
+﻿<Window x:Class="Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="348*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Height="280" Margin="40" Width="300" Grid.Column="0" Grid.Row="0"/>
+        <ListBox Height="280" Margin="40" Width="300" Grid.Column="1" Grid.Row="0"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Style="{StaticResource BtnStyle}" Content="Load" Height="30" Width="100" Margin="10"/>
+            <Button Style="{StaticResource BtnStyle}" Content="Save" Height="30" Width="100" HorizontalAlignment="Center" Margin="10"/>
+            <Button Style="{StaticResource BtnStyle}" Content="Add" Height="30" Width="100" Margin="10"/>
+            <Button Style="{StaticResource BtnStyle}" Content="Delete" Height="30" Width="100" HorizontalAlignment="Center" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
+    
+    
